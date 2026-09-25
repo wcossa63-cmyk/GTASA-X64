@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="22.0dip"
+    android:width="28.0dip"
+    android:viewportWidth="28.0"
+    android:viewportHeight="22.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@drawable/speedometer_light_door_off__0" android:pathData="M23.399,21.993C26.041,21.993 27.33,20.799 27.33,18.304V12.467C27.33,10.76 26.829,9.841 25.39,8.803L15.663,1.748C14.011,0.566 12.734,0.148 10.694,0.148H4.622C2.094,0.148 0.804,1.366 0.804,3.753V18.304C0.804,20.799 2.081,21.993 4.735,21.993H23.399ZM23.324,10.987H4.66C3.508,10.987 2.82,10.354 2.82,9.208V3.849C2.82,2.691 3.496,2.07 4.66,2.07H10.694C12.296,2.07 13.222,2.333 14.286,3.145L23.612,9.949C24.125,10.307 23.988,10.987 23.324,10.987Z" />
+</vector>

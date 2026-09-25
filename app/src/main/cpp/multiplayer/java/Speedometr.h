@@ -1,0 +1,40 @@
+#include <jni.h>
+
+static class CSpeedometr {
+
+public:
+
+    enum
+    {
+        BUTTON_ENGINE,
+        BUTTON_LIGHT,
+        BUTTON_TURN_LEFT,
+        BUTTON_TURN_RIGHT,
+        BUTTON_TURN_ALL
+    };
+
+    static bool bIsShow;
+    static bool bIsNoNeedDraw;
+
+    static void hide();
+
+    static void show();
+
+    static jclass clazz;
+
+    static void UpdateSpeed();
+    static void UpdateInfo();
+
+    static jobject thiz;
+
+    static float fFuel;
+    static int iMilliage;
+
+    static void tempToggle(bool toggle);
+
+    static void updateFuel();
+
+    static void setMaxCarValues(int maxHp, int maxTank);
+
+    static void updateTurn(bool isTurn);
+};

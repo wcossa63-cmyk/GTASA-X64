@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="19.0dip"
+    android:width="30.0dip"
+    android:viewportWidth="30.0"
+    android:viewportHeight="19.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@drawable/speedometer_light_icon_off__0" android:pathData="M20.416,0H10.832V19H20.416C25.708,19 29.999,14.747 29.999,9.5C29.999,4.253 25.708,0 20.416,0ZM27.916,11.565L26.77,13.675C25.67,15.7 23.586,17.013 21.27,17.14L17.499,17.348L22.029,15.552C23.169,15.099 24.236,14.483 25.195,13.722L27.916,11.565Z" android:fillType="evenOdd" />
+    <path android:fillColor="@drawable/speedometer_light_icon_off__1" android:pathData="M-0.001,2.478H9.166V4.13H-0.001V2.478Z" />
+    <path android:fillColor="@drawable/speedometer_light_icon_off__2" android:pathData="M-0.001,6.609H9.166V8.261H-0.001V6.609Z" />
+    <path android:fillColor="@drawable/speedometer_light_icon_off__3" android:pathData="M-0.001,10.739H9.166V12.391H-0.001V10.739Z" />
+    <path android:fillColor="@drawable/speedometer_light_icon_off__4" android:pathData="M-0.001,14.87H9.166V16.522H-0.001V14.87Z" />
+</vector>

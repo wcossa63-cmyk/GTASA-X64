@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="75dp"
+    android:width="75dp"
+    android:viewportWidth="75"
+    android:viewportHeight="75">
+    <path
+        android:fillColor="@drawable/_hud_green_zone_circle__0_res_0x7f07008a"
+        android:pathData="M37.5,0L37.5,0A37.5,37.5 0,0 1,75 37.5L75,37.5A37.5,37.5 0,0 1,37.5 75L37.5,75A37.5,37.5 0,0 1,0 37.5L0,37.5A37.5,37.5 0,0 1,37.5 0z"/>
+    <path
+        android:fillColor="#5add77"
+        android:pathData="M0,37.5C0,58.211 16.789,75 37.5,75C58.211,75 75,58.211 75,37.5C75,16.789 58.211,0 37.5,0C16.789,0 0,16.789 0,37.5ZM70.802,37.5C70.802,55.892 55.892,70.802 37.5,70.802C19.108,70.802 4.198,55.892 4.198,37.5C4.198,19.108 19.108,4.198 37.5,4.198C55.892,4.198 70.802,19.108 70.802,37.5Z"/>
+</vector>

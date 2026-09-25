@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/speedometer_main_layout"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:visibility="visible">
+
+	<ImageView
+		android:id="@+id/backShadow"
+		android:layout_width="0.0dip"
+		android:layout_height="0.0dip"
+		android:adjustViewBounds="true"
+		android:background="@drawable/hud_speedometer_main_shadow"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHeight_percent="0.25"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintWidth_percent="0.5" />
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="0.0dip"
+		android:layout_height="wrap_content"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="@id/backShadow"
+		app:layout_constraintStart_toStartOf="@id/backShadow"
+		app:layout_constraintWidth_percent="0.37">
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/healthLayout"
+			android:layout_width="0.0dip"
+			android:layout_height="0.0dip"
+			android:layout_marginEnd="@dimen/_2sdp"
+			app:layout_constraintBottom_toTopOf="@id/leftTurnLight"
+			app:layout_constraintEnd_toStartOf="@id/speedLayout"
+			app:layout_constraintHeight_percent="0.32"
+			app:layout_constraintStart_toStartOf="@id/emergency"
+			app:layout_constraintWidth_percent="0.185">
+
+			<TextView
+				android:id="@+id/healthText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:fontFamily="@font/akrobat_extra_bold"
+				android:tag="speedometer_health_text"
+				android:textColor="#b3ffffff"
+				android:textSize="@dimen/_5sdp"
+				app:layout_constraintBottom_toTopOf="@id/healthProgress"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<ImageView
+				android:id="@+id/healthIcon"
+				android:layout_width="0.0dip"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="@dimen/_1sdp"
+				android:adjustViewBounds="true"
+				android:src="@drawable/speedometer_health_icon"
+				app:layout_constraintBottom_toTopOf="@id/healthProgress"
+				app:layout_constraintStart_toEndOf="@id/healthProgress"
+				app:layout_constraintWidth_percent="0.25" />
+
+			<ProgressBar
+				android:id="@+id/healthProgress"
+				style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+				android:layout_width="0.0dip"
+				android:layout_height="@dimen/_2sdp"
+				android:layout_marginBottom="@dimen/_3sdp"
+				android:max="100"
+				android:progress="65"
+				android:progressDrawable="@drawable/speedometer_health_progress"
+				android:rotation="-16.0"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintWidth_percent="0.4" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/speedLayout"
+			android:layout_width="0.0dip"
+			android:layout_height="wrap_content"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintWidth_percent="0.48">
+
+			<com.blrp.game.gui.util.SpeedometerView
+				android:id="@+id/speed"
+				android:layout_width="0.0dip"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="@dimen/_10sdp"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:speed_arcWidth="@dimen/_2sdp"
+				app:speed_currentSpeed="25"
+				app:speed_font="@font/akrobat_extra_bold"
+				app:speed_maxSpeed="60" />
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:id="@+id/info"
+				android:layout_width="0.0dip"
+				android:layout_height="0.0dip"
+				android:adjustViewBounds="true"
+				android:background="@drawable/speedometer_info_icon"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintHeight_percent="0.35"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintWidth_percent="0.5">
+
+				<ImageView
+					android:id="@+id/lightsIcon"
+					android:layout_width="0.0dip"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="@dimen/_3sdp"
+					android:adjustViewBounds="true"
+					android:src="@drawable/speedometer_light_icon_off"
+					app:layout_constraintBottom_toBottomOf="parent"
+					app:layout_constraintEnd_toStartOf="@id/engineIcon"
+					app:layout_constraintHorizontal_bias="0.5"
+					app:layout_constraintHorizontal_chainStyle="packed"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="@id/info"
+					app:layout_constraintWidth_percent="0.2" />
+
+				<ImageView
+					android:id="@+id/engineIcon"
+					android:layout_width="0.0dip"
+					android:layout_height="0.0dip"
+					android:layout_marginStart="@dimen/_3sdp"
+					android:adjustViewBounds="true"
+					android:src="@drawable/speedometer_light_engine_off"
+					app:layout_constraintBottom_toBottomOf="@id/lightsIcon"
+					app:layout_constraintEnd_toStartOf="@id/doorIcon"
+					app:layout_constraintHorizontal_bias="0.5"
+					app:layout_constraintStart_toEndOf="@id/lightsIcon"
+					app:layout_constraintTop_toTopOf="@id/lightsIcon"
+					app:layout_constraintWidth_percent="0.2" />
+
+				<ImageView
+					android:id="@+id/doorIcon"
+					android:layout_width="0.0dip"
+					android:layout_height="0.0dip"
+					android:layout_marginStart="@dimen/_3sdp"
+					android:adjustViewBounds="true"
+					android:src="@drawable/speedometer_light_door_off"
+					app:layout_constraintBottom_toBottomOf="@id/lightsIcon"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintHorizontal_bias="0.5"
+					app:layout_constraintStart_toEndOf="@id/engineIcon"
+					app:layout_constraintTop_toTopOf="@id/lightsIcon"
+					app:layout_constraintWidth_percent="0.2" />
+			</androidx.constraintlayout.widget.ConstraintLayout>
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<ImageView
+			android:id="@+id/emergency"
+			android:layout_width="wrap_content"
+			android:layout_height="0.0dip"
+			android:layout_marginBottom="@dimen/_10sdp"
+			android:adjustViewBounds="true"
+			android:src="@drawable/speedometer_emergency_passive"
+			app:layout_constraintBottom_toBottomOf="@id/speedLayout"
+			app:layout_constraintEnd_toStartOf="@id/speedLayout"
+			app:layout_constraintHeight_percent="0.3" />
+
+		<androidx.constraintlayout.widget.Guideline
+			android:id="@+id/leftTurnLightEndGl"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			app:layout_constraintGuide_percent="0.16" />
+
+		<ImageView
+			android:id="@+id/leftTurnLight"
+			android:layout_width="wrap_content"
+			android:layout_height="0.0dip"
+			android:layout_marginEnd="@dimen/_minus4sdp"
+			android:adjustViewBounds="true"
+			android:src="@drawable/speedometer_turn_light_passive"
+			app:layout_constraintBottom_toBottomOf="@id/emergency"
+			app:layout_constraintEnd_toStartOf="@id/leftTurnLightEndGl"
+			app:layout_constraintHeight_percent="0.4" />
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/fuelLayout"
+			android:layout_width="0.0dip"
+			android:layout_height="0.0dip"
+			android:layout_marginStart="@dimen/_2sdp"
+			android:tag="speedometer_fuel"
+			app:layout_constraintBottom_toTopOf="@id/rightTurnLight"
+			app:layout_constraintEnd_toEndOf="@id/lights"
+			app:layout_constraintHeight_percent="0.32"
+			app:layout_constraintStart_toEndOf="@id/speedLayout"
+			app:layout_constraintWidth_percent="0.185">
+
+			<TextView
+				android:id="@+id/fuelText"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:fontFamily="@font/akrobat_extra_bold"
+				android:textColor="#b3ffffff"
+				android:textSize="@dimen/_5sdp"
+				app:layout_constraintBottom_toTopOf="@id/fuelProgress"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<ImageView
+				android:id="@+id/fuelIcon"
+				android:layout_width="0.0dip"
+				android:layout_height="wrap_content"
+				android:layout_marginEnd="@dimen/_1sdp"
+				android:adjustViewBounds="true"
+				android:src="@drawable/speedometer_fuel_icon"
+				app:layout_constraintBottom_toTopOf="@id/fuelProgress"
+				app:layout_constraintEnd_toStartOf="@id/fuelProgress"
+				app:layout_constraintWidth_percent="0.2" />
+
+			<ProgressBar
+				android:id="@+id/fuelProgress"
+				style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+				android:layout_width="0.0dip"
+				android:layout_height="@dimen/_2sdp"
+				android:layout_marginBottom="@dimen/_3sdp"
+				android:max="100"
+				android:progress="35"
+				android:progressDrawable="@drawable/speedometer_fuel_progress"
+				android:rotation="16.0"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintWidth_percent="0.4" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<ImageView
+			android:id="@+id/lights"
+			android:layout_width="wrap_content"
+			android:layout_height="0.0dip"
+			android:layout_marginBottom="@dimen/_10sdp"
+			android:adjustViewBounds="true"
+			android:src="@drawable/speedometer_lights_passive"
+			android:tag="speedometer_light_button"
+			app:layout_constraintBottom_toBottomOf="@id/speedLayout"
+			app:layout_constraintHeight_percent="0.3"
+			app:layout_constraintStart_toEndOf="@id/speedLayout" />
+
+		<androidx.constraintlayout.widget.Guideline
+			android:id="@+id/rightTurnLightEndGl"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			app:layout_constraintGuide_percent="0.82" />
+
+		<ImageView
+			android:id="@+id/rightTurnLight"
+			android:layout_width="wrap_content"
+			android:layout_height="0.0dip"
+			android:adjustViewBounds="true"
+			android:rotationY="180"
+			android:src="@drawable/speedometer_turn_light_passive"
+			app:layout_constraintBottom_toBottomOf="@id/emergency"
+			app:layout_constraintHeight_percent="0.4"
+			app:layout_constraintStart_toEndOf="@id/rightTurnLightEndGl" />
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

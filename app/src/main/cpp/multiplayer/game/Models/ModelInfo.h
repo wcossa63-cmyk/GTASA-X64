@@ -1,0 +1,56 @@
+//
+// Created on 07.03.2023.
+//
+
+#pragma once
+
+#include "PedModelInfo.h"
+#include "AtomicModelInfo.h"
+#include "VehicleModelInfo.h"
+#include "WeaponModelInfo.h"
+#include "game/Core/Store.h"
+#include "game/constants.h"
+
+class CModelInfo {
+public:
+    static constexpr int32 NUM_MODEL_INFOS = 200000;
+    static inline CBaseModelInfo* ms_modelInfoPtrs[NUM_MODEL_INFOS];
+    static inline int32 ms_lastPositionSearched = 0;
+
+    static void injectHooks();
+
+    static constexpr int32_t NUM_PED_MODEL_INFOS = 1000;
+    static inline CStore<CPedModelInfo, NUM_PED_MODEL_INFOS> ms_pedModelInfoStore;
+
+    static constexpr int32 NUM_ATOMIC_MODEL_INFOS  = 75000;
+    static inline CStore<CAtomicModelInfo, NUM_ATOMIC_MODEL_INFOS> ms_atomicModelInfoStore;
+
+    static constexpr int32 NUM_VEHICLE_MODEL_INFOS = 1200;
+    static inline CStore<CVehicleModelInfo, NUM_VEHICLE_MODEL_INFOS> ms_vehicleModelInfoStore;
+
+    static constexpr int32 NUM_CLUMP_MODEL_INFOS = 50000;
+    static inline CStore<CClumpModelInfo, NUM_CLUMP_MODEL_INFOS> ms_clumpModelInfoStore;
+
+    static constexpr int32 NUM_WEAPON_MODEL_INFOS = 200;
+    static inline CStore<CWeaponModelInfo, NUM_WEAPON_MODEL_INFOS> ms_weaponModelInfoStore;
+
+    static CPedModelInfo *AddPedModel(int index);
+
+    static CAtomicModelInfo *AddAtomicModel(int index);
+    static CDamageAtomicModelInfo* AddDamageAtomicModel(int32 index);
+    static CVehicleModelInfo *AddVehicleModel(int index);
+    static CClumpModelInfo* AddClumpModel(int32 index);
+    static CWeaponModelInfo* AddWeaponModel(int32 index);
+
+    static CBaseModelInfo* GetModelInfo(const char* name, int32 minIndex, int32 maxIndex);
+    static CBaseModelInfo* GetModelInfo(const char* name, int32* index = nullptr);
+    static int32 GetModelInfoIndex(const char* name);
+
+    static CBaseModelInfo* GetModelInfo(int index) { return ms_modelInfoPtrs[index]; }
+    static auto GetPedModelInfo(int32_t index) { return GetModelInfo(index)->AsPedModelInfoPtr(); }
+    static auto GetVehicleModelInfo(int32_t index) { return GetModelInfo(index)->AsVehicleModelInfoPtr(); }
+    static void SetModelInfo(int index, CBaseModelInfo* pInfo) { ms_modelInfoPtrs[index] = pInfo; }
+
+    static void Initialise();
+};
+

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "190547855556",
+    "project_id": "bligan-role-play-2d744",
+    "storage_bucket": "bligan-role-play-2d744.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190547855556:android:7f3da561eb39e6694ca191",
+        "android_client_info": {
+          "package_name": "com.blrp.game"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRBjKdBB5WOkxF5R5k2b4_Sv4usbLRCdc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190547855556:android:d1ec65c7211ab2d84ca191",
+        "android_client_info": {
+          "package_name": "com.blrp.game.test"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRBjKdBB5WOkxF5R5k2b4_Sv4usbLRCdc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

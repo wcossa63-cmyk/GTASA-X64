@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="75dp"
+    android:width="76dp"
+    android:viewportWidth="76"
+    android:viewportHeight="75">
+    <path
+        android:fillColor="@drawable/hud_weapon_circle__0"
+        android:pathData="M37.5,0L37.5,0A37.5,37.5 0,0 1,75 37.5L75,37.5A37.5,37.5 0,0 1,37.5 75L37.5,75A37.5,37.5 0,0 1,0 37.5L0,37.5A37.5,37.5 0,0 1,37.5 0z"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M37.5,1.015L37.5,1.015A36.485,36.485 0,0 1,73.985 37.5L73.985,37.5A36.485,36.485 0,0 1,37.5 73.985L37.5,73.985A36.485,36.485 0,0 1,1.015 37.5L1.015,37.5A36.485,36.485 0,0 1,37.5 1.015z"
+        android:strokeColor="#ffb4b4b4"
+        android:strokeWidth="2.03"/>
+    <group>
+        <clip-path android:pathData="M0,0h76v75h-76z"/>
+        <group>
+            <clip-path android:pathData="M-39.5,-40.5m-115.5,0a115.5,115.5 0,1 1,231 0a115.5,115.5 0,1 1,-231 0"/>
+            <path
+                android:fillColor="@drawable/hud_weapon_circle__1"
+                android:pathData="M37.5,37.5m-35.5,0a35.5,35.5 0,1 1,71 0a35.5,35.5 0,1 1,-71 0"/>
+        </group>
+    </group>
+    <path
+        android:fillColor="#ffffffff"
+        android:pathData="M0,37.5C0,58.211 16.789,75 37.5,75C58.211,75 75,58.211 75,37.5C75,16.789 58.211,0 37.5,0C16.789,0 0,16.789 0,37.5ZM72.967,37.5C72.967,57.088 57.088,72.967 37.5,72.967C17.912,72.967 2.033,57.088 2.033,37.5C2.033,17.912 17.912,2.033 37.5,2.033C57.088,2.033 72.967,17.912 72.967,37.5Z"/>
+</vector>

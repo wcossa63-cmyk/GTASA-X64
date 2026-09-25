@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="79.0dip"
+    android:width="108.0dip"
+    android:viewportWidth="108.0"
+    android:viewportHeight="79.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@drawable/speedometer_lights_passive__0" android:pathData="M88.59,25.21C98.04,51.38 78.64,79 50.81,79L13.5,79L13.5,68.91C13.5,48.13 9.9,27.5 2.86,7.94L0,0L52.7,0C68.78,0 83.14,10.08 88.59,25.21V25.21Z" />
+    <path android:fillColor="@drawable/speedometer_lights_passive__1" android:pathData="M57.5,28H46V51H57.5C63.85,51 69,45.85 69,39.5C69,33.15 63.85,28 57.5,28ZM66.5,42L65.12,44.55C63.8,47.01 61.31,48.59 58.52,48.75L54,49L59.44,46.83C60.8,46.28 62.08,45.53 63.24,44.61L66.5,42Z" android:fillType="evenOdd" />
+    <path android:fillColor="@drawable/speedometer_lights_passive__2" android:pathData="M33,31H44V33H33V31Z" />
+    <path android:fillColor="@drawable/speedometer_lights_passive__3" android:pathData="M33,36H44V38H33V36Z" />
+    <path android:fillColor="@drawable/speedometer_lights_passive__4" android:pathData="M33,41H44V43H33V41Z" />
+    <path android:fillColor="@drawable/speedometer_lights_passive__5" android:pathData="M33,46H44V48H33V46Z" />
+</vector>

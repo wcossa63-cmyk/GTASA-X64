@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:height="45dp"
+    android:width="38dp"
+    android:viewportWidth="38"
+    android:viewportHeight="45">
+    <path
+        android:fillColor="@drawable/_hud_green_zone_weapon__0_res_0x7f07008b"
+        android:pathData="M19,45C13.498,43.688 8.955,40.696 5.372,36.027C1.789,31.358 -0.002,26.174 0,20.475V6.75L19,0L38,6.75V20.475C38,26.175 36.208,31.36 32.625,36.029C29.042,40.699 24.5,43.689 19,45Z"/>
+</vector>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hud_chat_type_item"
+    android:layout_width="@dimen/_51sdp"
+    android:layout_height="@dimen/_14sdp">
+    <TextView
+        android:textSize="@dimen/_6sdp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:id="@+id/chat_type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Департамент"
+        android:fontFamily="@font/bebas_neue_pro_semi_exp_bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:layout_width="@dimen/_1sdp"
+        android:layout_height="0dp"
+        android:src="@drawable/hud_chat_type_delimiter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
